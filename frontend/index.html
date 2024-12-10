@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Elteridium Contract Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Elteridium Contract Platform</h1>
+
+        <div class="section" id="createContract">
+            <h2>Create Contract</h2>
+            <textarea id="contractJson" rows="10" placeholder="Enter contract JSON"></textarea>
+            <button onclick="createContract()">Create Contract</button>
+        </div>
+
+        <div class="section" id="updateCondition">
+            <h2>Update Condition</h2>
+            <input type="number" id="contractId" placeholder="Contract ID">
+            <textarea id="conditionJson" rows="5" placeholder="Enter condition status"></textarea>
+            <button onclick="updateCondition()">Update Condition</button>
+        </div>
+
+        <div class="section" id="checkStatus">
+            <h2>Check Contract Status</h2>
+            <input type="number" id="statusContractId" placeholder="Contract ID">
+            <button onclick="checkStatus()">Check Status</button>
+            <div id="statusResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
