@@ -30,18 +30,18 @@
     ]
 }
 
-### Deployment Notes
+Deployment Notes
 - This is a PoC and requires additional security, error handling, and production configurations
 - CORS and proper API authentication should be implemented
 - Consider using environment variables for configuration
 
-### Next Steps
+ Next Steps
 1. Add authentication
 2. Implement more robust condition checking
 3. Create more complex action handlers
 4. Add logging and monitoring
 
-## Running the PoC
+Running the PoC
 1. Start the backend: 
    ```bash
    cd backend
@@ -99,14 +99,14 @@ bashCopy# Clone the repository
 git clone <repository-url>
 cd elteridium-poc
 
-# Create virtual environment
+Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+Install dependencies
 pip install -r backend/requirements.txt
 
-# Run the backend
+Run the backend
 uvicorn backend.main:app --reload
 Usage Guide
 Frontend Interaction
