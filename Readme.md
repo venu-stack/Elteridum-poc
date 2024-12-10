@@ -51,22 +51,25 @@ Running the PoC
    uvicorn main:app --reload
 
 Elteridium Contract Platform - Proof of Concept (PoC)
+-----------------------------------------------------
+
 Table of Contents
+-----------------
+
+1.Project Overview
+2.System Architecture
+3.Setup and Installation
+4.Usage Guide
+5.API Endpoints
+6.Frontend Interactions
+7.Backend Entry Management
+8.Example Use Cases
+9.Troubleshooting
+10.Future Improvements
 
 Project Overview
-System Architecture
-Setup and Installation
-Usage Guide
-API Endpoints
-Frontend Interactions
-Backend Entry Management
-Example Use Cases
-Troubleshooting
-Future Improvements
-
-Project Overview
-Purpose
-The Elteridium Contract Platform is a lightweight, flexible system for creating and managing contracts with condition-based execution.
+-----------------
+Purpose : The Elteridium Contract Platform is a lightweight, flexible system for creating and managing contracts with condition-based execution.
 Key Features
 
 Dynamic contract creation
@@ -83,7 +86,7 @@ Backend: FastAPI Python Application
 Database: SQLite local database
 
 Technology Stack
-
+-----------------
 Python 3.9+
 FastAPI
 SQLAlchemy
