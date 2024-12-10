@@ -10,7 +10,9 @@
 ## Usage Examples
 
 ### Create a Contract
-```json
+
+json
+------
 {
     "name": "Sample Contract",
     "conditions": {
@@ -43,7 +45,8 @@ Deployment Notes
 
 Running the PoC
 1. Start the backend: 
-   ```bash
+   bash
+   -----
    cd backend
    uvicorn main:app --reload
 
@@ -170,47 +173,8 @@ def list_contracts(db: Session = Depends(get_db)):
             "created_at": contract.created_at.isoformat()
         } for contract in contracts
     ]
-Frontend JavaScript to List Contracts
-Add to frontend/script.js:
-javascriptCopyasync function listContracts() {
-    try {
-        const response = await fetch('http://localhost:8000/list_contracts');
-        const contracts = await response.json();
-        const contractList = document.getElementById('contractList');
-        contractList.innerHTML = '<h3>Contracts:</h3>';
-        
-        contracts.forEach(contract => {
-            const contractElement = document.createElement('div');
-            contractElement.classList.add('contract-item');
-            contractElement.innerHTML = `
-                <strong>ID:</strong> ${contract.id}<br>
-                <strong>Name:</strong> ${contract.name}<br>
-                <strong>Status:</strong> ${contract.status}<br>
-                <strong>Conditions:</strong> ${JSON.stringify(contract.conditions)}<br>
-                <strong>Created At:</strong> ${contract.created_at}
-            `;
-            contractList.appendChild(contractElement);
-        });
-    } catch (error) {
-        console.error('Error listing contracts:', error);
-        alert('Failed to list contracts');
-    }
-}
-Update HTML
-Add to frontend/index.html:
-htmlCopy<div class="section" id="listContracts">
-    <h2>List Contracts</h2>
-    <button onclick="listContracts()">Refresh Contract List</button>
-    <div id="contractList"></div>
-</div>
-Add CSS to frontend/styles.css:
-cssCopy.contract-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
+    
+
 Example Use Cases
 Freelance Contract
 jsonCopy{
@@ -229,8 +193,9 @@ jsonCopy{
     ]
 }
 Troubleshooting
-Common Issues
 
+Common Issues
+-------------
 CORS errors: Ensure backend is running
 JSON formatting: Validate JSON structure
 Database connection: Check SQLite file permissions
